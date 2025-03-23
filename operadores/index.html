@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+    <link rel="stylesheet" href="../style2.css">
+</head>
+
+<body>
+    <header>
+        <h1>Unidad 5</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Operadores</h2>
+            <article>
+                <div>Los operadores se agrupan en las siguientes categorías:</div>
+
+                <div>Aritméticos. Realizan operaciones matemáticas sobre sus
+                    operandos.</div>
+
+                <div>Asignación. Asignan el valor del operando derecho al
+                    izquierdo. El más conocido es ʻ=ʼ.</div>
+
+                <div>Comparación. Tal como indica su nombre, los operadores de
+                    este grupo comparan los operandos y devuelven el valor true
+                    si son iguales o false en caso contrario. Dichos operandos
+                    podrán ser numéricos, lógicos, cadenas de caracteres e,
+                    incluso, objetos.</div>
+
+                <div>Al igual que los operadores de la categoría anterior,
+                    estos también devuelven el valor true o false, pero a
+                    diferencia de ellos, dicho valor se obtiene aplicando las reglas
+                    de algebra de Boole.</div>
+
+                <div>condición?valor1:valor2. Operador ternario formado
+                    por una condición y dos valores. La condición es una
+                    expresión de comparación y/o lógica cuyo resultado (true o
+                    false) determina si el resultado devuelto es el primer o el
+                    segundo valor.</div>
+
+                <div>typeof operando. Operador unario que devuelve el tipo de
+                    datos al que pertenece su operando.</div>
+            </article>
+            <article>
+                <h2>OPERADORES ARITMÉTICOS</h2>
+                <div>Operadores binarios:</div>
+                <div>Suma (+): suma números o concatena cadenas</div>
+                <div>Resta (-)</div>
+                <div>Multiplicación (*)</div>
+                <div>División (/)</div>
+                <div>Resto (%)</div>
+                <div>Exponenciación (**)</div>
+                <div>Incremento (++)</div>
+                <div>Decremento (--)</div>
+                <div>Negación (-)</div>
+                <div>Características importantes:</div>
+                <div>El operador '+' es especial: suma números y concatena cadenas.
+                    Por ejemplo: 5 + 5 = 10, pero "5" + 5 = "55".</div>
+                <div>Conversión automática: si un operando es cadena, el otro se convierte a cadena en la suma.   Por ejemplo: 5 + "5" = "55".</div>
+                <div>Con otros operadores, las cadenas numéricas se convierten a números.</div>
+                <div>Incremento y decremento pueden ir antes o después de la variable, afectando cuándo se aplica el cambio.</div>
+            </article>
+            <article>
+                <h2>OPERADORES DE ASIGNACIÓN</h2>
+                <div>Asignación simple (=)</div>
+                <div>Asignación aditiva (+=):Asigna a la variable situada a la izquierda el resultado de sumar su valor inicial al de la expresión derecha.</div>
+                <div>Asignación multiplicativa (*=)</div>
+                <div>Asignación de resto (%=)</div>
+                <div>Asignación de exponente (**=)</div>
+                <div>Asignación de división (/=)</div>
+                <div>Asignación de resta(-=)</div>
+                <div>El operador += también se usa para concatenar cadenas. Si uno de los operandos es una cadena, JavaScript convierte automáticamente el otro en una cadena y los concatena.</div>
+                <div>Es posible usar múltiples operadores de asignación en una misma línea.</div>
+                <div>Estos operadores de asignación compuestos proporcionan una forma concisa de realizar operaciones y asignaciones en una sola expresión, lo que puede hacer que el código sea más eficiente y legible.</div>
+            </article>
+            <article>
+                <h2>OPERADORES DE COMPARACIÓN</h2>
+                <div>Los operadores de comparación en JavaScript son herramientas fundamentales para evaluar condiciones y controlar el flujo de ejecución del programa. Estos operadores devuelven un valor booleano (true o false) basado en la comparación de sus operandos. JavaScript ofrece los siguientes operadores de comparación:</div>
+                <div>Igualdad (==): Compara si los valores de los operandos son iguales, realizando conversiones de tipo si es necesario.</div>
+                <div>Igualdad estricta (===): Compara si los valores y tipos de los operandos son idénticos, sin realizar conversiones.</div>
+                <div>Desigualdad (!=): Compara si los valores de los operandos son diferentes, realizando conversiones de tipo si es necesario.</div>
+                <div>Desigualdad estricta (!==): Compara si los valores o tipos de los operandos son diferentes, sin realizar conversiones.</div>
+                <div>Menor que , menor o igual que, mayor que , mayor o igual que: Comparan valores numéricos o lexicográficamente las cadenas.</div>
+                <div>Características importantes:</div>
+                <div>Las comparaciones de cadenas se realizan utilizando el orden lexicográfico basado en los valores Unicode de los caracteres</div>
+                <div>Al comparar una cadena con un número, JavaScript intenta convertir la cadena a un número.</div>
+                <div>Una cadena vacía ("") se convierte en 0 para comparaciones numéricas.</div>
+                <div>Se recomienda usar comparaciones estrictas (=== y !==) para evitar conversiones de tipo inesperadas.</div>
+                <div>null y undefined son considerados iguales con ==, pero diferentes con ===.</div>
+            </article>
+            <article>
+                <h2>OPERADORES LÓGICOS</h2>
+                <div>Los operadores lógicos en JavaScript aplican las reglas del álgebra de Boole y se utilizan solos o en combinación con operadores de comparación. JavaScript ofrece tres operadores lógicos principales:</div>
+                <div>AND(&&):</div>
+                <div>Devuelve true si ambos operandos son true, false en caso contrario.</div>
+                <div>Para valores no booleanos, devuelve el valor del primer operando si este se puede convertir a false. De lo contrario, devuelve el valor del segundo operando.</div>
+                <div>OR(||)</div>
+                <div>Devuelve true si alguno de sus operandos es true, false en caso contrario.</div>
+                <div>Para valores no booleanos, devuelve el valor del primer operando si este se puede convertir a true. De lo contrario, devuelve el valor del segundo operando.</div>
+                <div>NOT (!)</div>
+                <div>Devuelve el valor opuesto del operando, true si es false y viceversa.</div>
+                <div>Para valores no booleanos, devuelve false si su único operando se puede convertir a true. De lo contrario, devuelve true.</div>
+                <div>JavaScript convierte a false los siguientes valores en operaciones lógicas:</div>
+                <div>undefined, null, NaN, cadena vacía y número 0</div>
+            </article>
+            <article>
+                <h2>OPERADORES condicional</h2>
+                <div>Los operadores condicionales en JavaScript permiten evaluar una condición y ejecutar una acción basada en el resultado de esa evaluación:</div>
+                <div><pre>condición ? valor1 : valor2</pre></div>
+                <div>Si la condición es true, devuelve valor1.</div>
+                <div>Si la condición es false, devuelve valor2.</div>
+                <div>Este operador es útil para simplificar estructuras condicionales (if-else) en una sola línea.</div>
+            </article>
+            <article>
+                <h2>Operador typeof</h2>
+                <div>El operador typeof devuelve el tipo de dato de un valor:</div>
+                <div>typeof valor</div>
+                <div>Además de los tipos de datos primitivos (String, Number, BigInt, Boolean, Null y Undefined), typeof también identifica dos tipos adicionales:</div>
+                <div>Object: Representa estructuras de datos formadas por atributos y métodos, fundamentales en la programación orientada a objetos.</div>
+                <div>Function: Aunque poco común, las funciones son consideradas un tipo de dato especial en JavaScript, siendo el único tipo invocable.</div>
+                <div><pre>typeof null // Devuelve "object"</pre></div>
+                <div>Esta respuesta es considerada una inconsistencia en el lenguaje. Aunque null es un valor primitivo, typeof null devuelve "object". Esto se debe a un error histórico en la implementación original de JavaScript que se ha mantenido por razones de compatibilidad. Algunos desarrolladores lo consideran un error, mientras que otros lo justifican argumentando que null se usa frecuentemente para indicar una referencia vacía a un objeto.</div>
+                <div>Esta peculiaridad de typeof null es un aspecto importante a tener en cuenta al trabajar con tipos de datos en JavaScript, especialmente cuando se realizan comprobaciones de tipo.</div>
+            </article>
+            <article>
+                <h2>PRECEDENCIA DE OPERADORES</h2>
+                <div>Orden de ejecución: No siempre es de izquierda a derecha o de derecha a izquierda. La precedencia de los operadores determina el orden.</div>
+                <div>Precedencia de operadores (de mayor a menor):</div>
+                <div>ncremento/decremento (++, --)</div>
+                <div>Negación y typeof (-, typeof)</div>
+                <div>Exponenciación (**)</div>
+                <div>Multiplicación, división, resto (*, /, %)</div>
+                <div>Adición y sustracción (+, -)</div>
+                <div>Comparación</div>
+                <div>Igualdad (==, !=, ===, !==)</div>
+                <div>Operador condicional (?:)</div>
+                <div>Asignación (=, +=, -=, *=, /=, %=, **=)</div>
+                <div>Uso de paréntesis: Se pueden usar para modificar el orden de ejecución. Por ejemplo, (2 + 3) * 5 ** 2 daría como resultado 625.</div>
+                <div>Paréntesis como operador de agrupación: Tienen la mayor precedencia y pueden usarse para forzar un orden de evaluación específico.</div>
+            </article>
+            <script src="script.js"></script>
+        </section>
+    </main>
+    <footer>
+        <p><a href="../index.html">Volver a la pagina principal</a></p>
+    </footer>
+</body>
+
+</html>
