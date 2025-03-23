@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de datos primitivos</title>
+    <link rel="stylesheet" href="../style2.css">
+</head>
+
+<body>
+    <header>
+        <h1>Unidad 4</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Tipos de datos primitivos</h2>
+            <article>
+                <div>JavaScript utiliza tipado dinámico, lo que significa que no es necesario declarar el tipo de una
+                    variable al crearla. Los tipos primitivos son los más básicos con los que se puede trabajar,
+                    mientras que los tipos compuestos están formados por uno o más datos primitivos.</div>
+
+                <div>Estos tipos primitivos son inmutables, lo que significa que sus valores no pueden ser modificados
+                    una vez creados. Sin embargo, las variables que contienen estos valores pueden ser reasignadas.
+                </div>
+            </article>
+            <article>
+                <div>Los tipos de datos primitivos en JavaScript son:</div>
+
+                <div>Boolean: Representa valores lógicos true o false.</div>
+
+                <div>Number: Abarca números enteros y decimales.</div>
+
+                <div>BigInt: Para números enteros más grandes que los que puede representar Number.</div>
+
+                <div>String: Cadenas de caracteres, pueden usar comillas dobles o simples indistintamente.</div>
+
+                <div>Null: Representa un valor nulo o vacío.</div>
+
+                <div>Undefined: Indica la ausencia de valor, asignado automáticamente a variables declaradas sin
+                    inicializar.</div>
+
+                <div>Symbol: Un tipo adicional no cubierto en detalle en este contexto.</div>
+            </article>
+            <article>
+                <h2>Boolean</h2>
+                <div>
+                    El tipo de datos Boolean en JavaScript representa los conceptos de verdadero (true) y falso (false).
+                    Estas son sus características principales:</div>
+
+                <div>Valores: Solo tiene dos posibles valores: true y false.</div>
+
+                <div>Uso en comparaciones: Son el resultado de evaluar expresiones de comparación y operaciones lógicas.
+                </div>
+
+                <div>Se utilizan en estructuras de control como:</div>
+
+                <div>Sentencias condicionales: if...else y switch...case.for, while, y do...while.</div>
+            </article>
+            <article>
+                <h2>Number</h2>
+                <div>JavaScript usa un solo tipo Number para todos los valores numéricos (enteros y decimales)./div>
+
+                    <div>Limitaciones de precisión:</div>
+
+                    <div>Fuera de ese rango, se producen redondeos.</div>
+
+                    <div>Los cálculos con decimales pueden tener imprecisiones (ej: 0.1 + 0.2 no da exactamente 0.3).
+                    </div>
+                    <div>Para solucionar esto se pone una n al final commo por ejemplo:
+                        9007199254740993n
+                    </div>
+                    <div>La "n" es para usar el tipo BigInt, lo malo es que no maneja decimales</div>
+
+                    <div>Valores especiales:</div>
+
+                    <div>Infinity y -Infinity para representar infinito matemático.</div>
+
+                    <div>NaN (Not a Number) para operaciones matemáticas inválidas.</div>
+            </article>
+            <article>
+                <h2>String</h2>
+                <div>El tipo de datos String se utiliza para manejar textos, representados como una secuencia de
+                    caracteres alfanuméricos entre comillas simples (') o dobles (").</div>
+
+                <div>Ejemplo: 'Hola' y "Hola" son equivalentes.</div>
+
+                <div>Se pueden mezclar comillas simples y dobles dentro de una cadena, siempre que sean diferentes.
+                </div>
+                <div>Ejemplo: 'El libro "Don Quijote"'</div>
+                <div>Permiten incluir caracteres especiales dentro de las cadenas utilizando una barra invertida (\).
+                </div>
+                <div>Ejemplos comunes:</div>
+                <div>\n: Salto de línea.</div>
+                <div>\t: Tabulador.</div>
+                <div>\': Comilla simple.</div>
+                <div>\\: Barra invertida literal.</div>
+                <div>Las cadenas son inmutables, lo que significa que no pueden modificarse directamente, pero es
+                    posible crear nuevas cadenas basadas en operaciones sobre las existentes.</div>
+                <div>Para dividir cadenas largas en varias líneas en el código, se debe usar el carácter \ al final de
+                    cada línea.</div>
+            </article>
+            <article>
+                <h2>NULL Y UNDEFINED</h2>
+                <div>NULL y UNDEFINED son dos valores especiales en JavaScript que se utilizan para representar la
+                    ausencia de un valor.</div>
+                <div>NULL es un valor que se utiliza para representar la ausencia de un valor en un campo de una base de datos o en un objeto.</div>
+                <div>UNDEFINED es un valor que se utiliza para representar la ausencia de un valor en una variable o en un objeto.</div>
+            </article>
+            <article>
+                <h2>Conversión a números</h2>
+                <div>Number(valor): Convierte cualquier tipo de dato primitivo a número.</div>
+                <div>Los espacios al inicio o final de una cadena no afectan la conversión.</div>
+                <div>Si el valor no puede ser convertido a número, devuelve NaN.</div>
+                <div>Cadenas vacías o solo con espacios se convierten a 0.</div>
+                <div>La conversión es automática en operaciones aritméticas, excepto en la suma.</div>
+                <div>parseInt(cadena, base): Convierte una cadena a número entero.</div>
+                <div>parseFloat(cadena, base): Convierte una cadena a número de coma flotante.</div>
+                <div>Admiten un segundo argumento opcional para especificar la base numérica.</div>
+                <div>parseInt solo devuelve NaN si la cadena no comienza por un número.</div>
+                <div>parseInt elimina decimales sin redondear.</div>
+            </article>
+            <article>
+                <h2>Conversión a cadenas</h2>
+                <div>La función global String(valor) es la principal forma de convertir cualquier tipo de dato primitivo en una cadena en JavaScript.</div>
+                <div>Números: String(123) devuelve "123".</div>
+                <div>Booleanos: String(true) devuelve "true", String(false) devuelve "false"</div>
+                <div>Valores especiales: String(null) devuelve "null", String(undefined) devuelve "undefined"</div>
+                <div>Alternativamente, para booleanos y números, se puede usar el método toString(): </div>
+                <div>123.toString() devuelve "123".</div>
+                <div>true.toString() devuelve "true".</div>
+                <div>Existen otros métodos específicos para números que ofrecen más control sobre la conversión:</div>
+                <div>toFixed(decimales): Redondea el número a los decimales especificados.</div>
+                <div>toExponential(decimales): Expresa el número en notación exponencial.</div>
+                <div>toPrecision(dígitos): Redondea el número al número de dígitos significativos especificado.</div>
+            </article>
+            <article>
+                <h2>Conversión a booleanos</h2>
+                <div>Boolean(valor): Convierte cualquier tipo de dato primitivo a booleano.</div>
+                <div>Cadenas:</div>
+                <div>Cualquier cadena no vacía (incluso si solo contiene espacios) se convierte en true.</div>
+                <div>Cadenas vacías se convierten en false.</div>
+                <div>Números:</div>
+                <div>0, -0, NaN se convierten en false.</div>
+                <div>Los demás números se convierten en true.</div>
+                <div>otros valores</div>
+                <div>Los valores null y undefined se convierten en false.</div>
+                <div>Objetos y arrays (incluso vacíos) se convierten en true.</div>
+                </article>
+            </article>
+            <script src="script.js"></script>
+        </section>
+    </main>
+    <footer>
+        <p><a href="../index.html">Volver a la pagina principal</a></p>
+    </footer>
+
+
+</body>
+
+</html>
