@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENTENCIAS DE CONTROL DE FLUJO</title>
+    <link rel="stylesheet" href="../style2.css">
+</head>
+
+<body>
+    <header>
+        <h1>Unidad 6</h1>
+    </header>
+    <main>
+        <section>
+            <h2>SENTENCIAS DE CONTROL DE FLUJO</h2>
+            <article>
+                <h2>if..else</h2>
+                <div>La sentencia condicional if...else en JavaScript permite ejecutar bloques de código diferentes
+                    según se cumpla o no una condición. Su sintaxis básica es la siguiente:</div>
+                <div>
+                    <pre>if (condición) {
+                    // Código a ejecutar si la condición es verdadera
+                  } else {
+                    // Código a ejecutar si la condición es falsa
+                  }</pre>
+                </div>
+                <div>Las llaves {} son opcionales si el bloque contiene una sola sentencia.</div>
+                <div>La cláusula else es opcional, permitiendo una versión simplificada:</div>
+                <div>
+                    <pre>if (condición) {
+                    // Código a ejecutar si la condición es verdadera
+                  }</pre>
+                </div>
+                <div>Se pueden anidar múltiples condiciones usando else if:</div>
+                <div>
+                    <pre>if (condición1) {
+                    // Código a ejecutar si la condición1 es verdadera
+                    } else if (condición2) {
+                        // Código a ejecutar si la condición2 es verdadera
+                    } else {
+                        // Código a ejecutar si ninguna condición es verdadera
+                            }</pre>
+                </div>
+                <div>Es importante notar que en sentencias if anidadas, cada condición se evalúa solo si las anteriores son falsas. Esto permite crear lógicas de decisión complejas y flexibles.</div>
+                <div>Para condiciones más complejas con múltiples casos, puede ser más apropiado usar la sentencia switch...case, especialmente cuando se compara una variable contra valores específicos.</div>
+            </article>
+            <article>
+                <h2>switch..case</h2>
+                <div>La sentencia switch en JavaScript permite ejecutar bloques de código basados en el valor de una expresión, siendo una alternativa más legible a múltiples condiciones if...else if. Su sintaxis es la siguiente:</div>
+                <div><pre>switch (expresión) {
+                    case valor1:
+                      // Código a ejecutar si expresión === valor1
+                      break;
+                    case valor2:
+                      // Código a ejecutar si expresión === valor2
+                      break;
+                    default:
+                      // Código a ejecutar si no hay coincidencia
+                  }</pre></div>
+                <div>Funcionamiento:</div>
+                <div>Se evalúa el valor de la expresión proporcionada.</div>
+                <div>Se compara el valor de la expresión con los valores especificados en cada case usando igualdad estricta (===).</div>
+                <div>Si hay coincidencia, se ejecuta el bloque de código correspondiente.</div>
+                <div>La sentencia break detiene la ejecución del switch. Si se omite, los bloques de los casos siguientes también se ejecutarán ("fall-through").</div>
+                <div>Si no hay coincidencias, se ejecuta el bloque asociado a default, que es opcional.</div>
+                <div>Múltiples casos pueden compartir un mismo bloque de código:</div>
+                <div>Aunque es útil para comparar valores específicos, no es adecuado para condiciones complejas o rangos.</div>
+            </article>
+            <article>
+                <h2>for</h2>
+                <div>El bucle for en JavaScript es una estructura de control que permite ejecutar un bloque de código un número determinado de veces. Su sintaxis es la siguiente:</div>
+                <div><pre>for (inicialización; condición; expresión-final) {
+                    // Código a ejecutar en cada iteración
+                  }</pre></div>
+                <div></div>
+                <div>Componentes del bucle for:</div>
+                <div>Inicialización: Se ejecuta una vez al inicio del bucle, generalmente para declarar e inicializar una variable contadora.</div>
+                <div>Condición: Evalúa si el bucle debe continuar. Si es true, se ejecuta el bloque de código; si es false, el bucle termina.</div>
+                <div>Expresión final: Se ejecuta al final de cada iteración, generalmente para actualizar o incrementar la variable contadora.</div>
+                <div>Opcionalidad: Las tres expresiones (inicialización, condición, expresión-final) son opcionales:</div>
+                <div>Si falta la inicialización, la variable debe declararse antes del bucle.</div>
+                <div><pre>let x = 1;
+                    for (; x = 10; x++) {
+                      console.log(x);
+                    }</pre></div>
+                <div>Si falta la condición, se evalúa siempre como true, creando un bucle infinito a menos que se use break.</div>
+                <div><pre>for (let i = 1;; i++) {
+                    if (i > 10) break;
+                    console.log(i);
+                  }</pre></div>
+                <div>Si falta la expresión final, la actualización debe realizarse dentro del bloque del bucle.</div>
+                <div><pre>for (let i = 1; i = 10;) {
+                    console.log(i);
+                    i++;
+                  }</pre></div>
+                <div>Eficiencia: El bucle for es más compacto y menos propenso a errores que otros bucles como while.</div>
+                <div>Flexibilidad: Puede adaptarse a diferentes escenarios, como recorrer arrays o realizar cálculos repetitivos</div>
+            </article>
+            <article>
+                <h2>While</h2>
+                <div>El bucle while en JavaScript es una estructura de control que ejecuta repetidamente un bloque de código mientras se cumpla una condición específica. Su sintaxis es:</div>
+                <div><pre>while (condición) {
+                    // bloque de código
+                  }</pre></div>
+                <div>Funcionamiento:</div>
+                <div>Se evalúa la condición.</div>
+                <div>Si es true, se ejecuta el bloque de código.</div>
+                <div>Se vuelve a evaluar la condición.</div>
+                <div>Si sigue siendo true, se repite el proceso. Si es false, se sale del bucle.</div>
+                <h2>do..while</h2>
+                <div>La sentencia do...while es similar, pero garantiza que el bloque de código se ejecute al menos una vez:</div>
+                <div><pre>do {
+                    // bloque de código
+                  } while (condición);</pre></div>
+                <div>La principal diferencia es que do...while siempre ejecuta el bloque al menos una vez, incluso si la condición es falsa inicialmente.</div>
+            </article>
+            <article>
+                <h2>Break y continue</h2>
+                <div>La sentencia break y continue son herramientas importantes para controlar el flujo de ejecución en bucles. Veamos sus diferencias y usos:</div>
+                <div>Break:</div>
+                <div>Termina inmediatamente la ejecución del bucle.</div>
+                <div>Uso en switch: Se usa al final de cada case para evitar la ejecución de los casos siguientes.</div>
+                <div>Uso en bucles: Permite salir completamente del bucle antes de que se cumpla la condición de finalización normal.</div>
+                <div>Continue:</div>
+                <div>Salta el resto del código en la iteración actual y pasa a la siguiente iteración del bucle.</div>
+                <div>Útil cuando quieres omitir parte del código del bucle en ciertas condiciones, pero continuar con las siguientes iteraciones.</div>
+            </article>
+            <script src="script.js"></script>
+        </section>
+    </main>
+    <footer>
+        <p><a href="../index.html">Volver a la pagina principal</a></p>
+    </footer>
+</body>
+
+</html>
