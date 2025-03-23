@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+    <link rel="stylesheet" href="../style2.css">
+</head>
+
+<body>
+    <header>
+        <h1>Unidad 8</h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Objetos</h2>
+                <div>JavaScript es un lenguaje de programación orientado a objetos que permite modelar entidades del mundo real como objetos. Esta característica facilita el desarrollo y mantenimiento de software, ya que se trabaja con conceptos similares a los del mundo físico.</div>
+                <div>Los objetos en JavaScript se componen de:</div>
+                <div>Propiedades: Son los rasgos distintivos o cualidades que describen al objeto. Por ejemplo, para un coche, las propiedades podrían ser marca, modelo, color y matrícula. Cada propiedad tiene un nombre y un valor.</div>
+                <div>Métodos: Determinan el comportamiento del objeto, es decir, las acciones que puede realizar. Para un coche, los métodos podrían ser arrancar, frenar y climatizar. Los métodos son funciones asociadas al objeto.</div>
+                <div>Los objetos son tipos de datos compuestos, formados por una colección de valores (propiedades), mientras que los datos primitivos solo contienen un valor.</div>
+                <div>Los objetos son mutables, pudiendo modificarse sin cambiar su identidad, mientras que los valores primitivos son inmutables.</div>
+                <div>En JavaScript, se trabaja con referencias a objetos, lo que tiene implicaciones importantes en la asignación, comparación y paso de objetos como argumentos a funciones.</div>
+                <div>Para crear un objeto en JavaScript, se puede utilizar la siguiente sintaxis:</div>
+                <div><pre>var nombreObjeto = {
+                    propiedad1: valor1,
+                    propiedad2: valor2,
+                    metodo1: function() {
+                      // Código del método
+                    }
+                  };</pre></div>
+            </article>
+            <article>
+                <h2>Propiedades</h2>
+                <div>Los objetos en JavaScript son estructuras de datos que permiten almacenar colecciones de propiedades (también llamadas atributos) y métodos. Las propiedades son características o cualidades del objeto, mientras que los métodos son funciones asociadas al objeto.</div>
+                <div>Para acceder a las propiedades de un objeto, se pueden utilizar dos notaciones:</div>
+                <div>Notación de punto: <code>objeto.propiedad</code></div>
+                <div>Notación de corchete: <code>objeto['propiedad']</code></div>
+                <div>Para modificar las propiedades de un objeto, se pueden utilizar las mismas notaciones visto anteriormente.</div>
+                <div><code>objeto.propiedad = "lo que quieres cambiar"</code></div>
+                <div>Para eliminar una propiedad, se utiliza el operador delete:</div>
+                <div><code>delete objeto.propiedad</code></div>
+                <div>Para recorrer todas las propiedades de un objeto, se puede usar el bucle for...in:</div>
+                <div><code>for (let propiedad in objeto) { 
+                    console.log(propiedad + ": " + objeto[propiedad]);    
+                } </code></div>
+                <div>Los objetos pueden contener otros objetos como propiedades:</div>
+                <div>Mira en el script.js</div>
+            </article>
+            <article>
+                <h2>Métodos</h2>
+                <div>Los métodos en la programación orientada a objetos (POO) representan las acciones que pueden realizar los objetos de una clase. Estos métodos definen el comportamiento de los objetos y constituyen su interfaz, permitiendo la comunicación con otros objetos o clases.</div>
+                <div>Los métodos se definen dentro de una clase y se implementan como funciones. En la notación de objetos, los métodos se representan como pares clave:valor, donde la clave es el nombre del método y el valor es una función anónima que contiene las instrucciones que establecen su comportamiento.</div>
+                <div>Características principales</div>
+                <div>Acceso a atributos: Los métodos pueden acceder y modificar los atributos del objeto utilizando la palabra clave this o self, dependiendo del lenguaje de programación.</div>
+                <div>ipos de métodos: Existen varios tipos de métodos, incluyendo:</div>
+                <div>Métodos para recuperar el estado del objeto</div>
+                <div>Métodos para modificar el estado del objeto</div>
+                <div>Métodos para realizar acciones específicas</div>
+                <div>Constructores para crear instancias de objetos</div>
+                <div>Invocación: Los métodos se invocan utilizando la sintaxis <code>objeto.metodo(argumentos).</code></div>
+                <div>Es posible añadir o eliminar métodos de un objeto dinámicamente:</div>
+                <div>mira el script.js</div>
+            </article>
+            <article>
+                <h2>LA FUNCIÓN CONSTRUCTORA</h2>
+                <div>Las funciones constructoras en JavaScript son una forma eficiente de crear objetos dinámicamente, especialmente cuando se necesitan múltiples instancias de un mismo tipo de objeto. Estas funciones ofrecen ventajas significativas sobre la notación literal de objetos en escenarios donde los datos no se conocen de antemano o cuando se requiere crear objetos en tiempo de ejecución.</div>
+                <div>Se invocan con el operador new.</div>
+                <div>Convencionalmente, su nombre comienza con mayúscula.</div>
+                <div>Crean un objeto vacío y lo asignan a this antes de ejecutar el cuerpo de la función.</div>
+                <div>Permiten definir propiedades y métodos comunes para todos los objetos creados con ellas.</div>
+                <div>Ventajas de las funciones constructoras</div>
+                <div>Creación dinámica de objetos: Permiten crear objetos cuando los datos se obtienen en tiempo de ejecución, por ejemplo, a través de formularios.</div>
+                <div>Eficiencia en la creación de múltiples objetos: Facilitan la creación de numerosos objetos del mismo tipo con una sola línea de código por objeto.</div>
+                <div>Reutilización de código: La estructura del objeto se define una vez en la función constructora y se reutiliza para cada nueva instancia.</div>
+                <div>Flexibilidad: Permiten añadir propiedades y métodos específicos a instancias individuales después de su creación.</div>
+                <div>El operador instanceof se utiliza para verificar si un objeto fue creado por una función constructora específica</div>
+            </article>
+            <article>
+                <h2>MUTABILIDAD</h2>
+                <div>La mutabilidad en JavaScript se refiere a la capacidad de modificar un objeto después de su creación. A diferencia de los tipos de datos primitivos (como números, strings y booleanos) que son inmutables, los objetos (incluyendo arrays) son mutables, lo que significa que su estado interno puede cambiar.</div>
+                <div>Mutable: Un objeto mutable puede ser modificado después de su creación.</div>
+                <div>Inmutable: Un objeto inmutable no puede ser modificado después de su creación.</div>
+                <div>Los datos primitivos en JavaScript son inmutables.</div>
+                <div>Los objetos y arrays son mutables.</div>
+                <div>Para evitar la mutación directa de objetos, se pueden clonar. JavaScript ofrece varias formas de clonar objetos:</div>
+                <div>Operador Spread: Crea una copia superficial del objeto.</div>
+                <div><code>const copy1 = { ...data };</code></div>
+                <div>Object.assign(): Crea una copia superficial del objeto.</div>
+                <div><code>const copy2 = Object.assign({}, data);</code></div>
+                <div>structuredClone(): Crea un clon profundo de un valor dado utilizando el algoritmo de clonación estructurada.</div>
+                <div><code>const copy4 = structuredClone(data);</code></div>
+                <div>Copia Superficial: Copia el primer nivel del objeto, pero los niveles más profundos se referencian.</div>
+                <div>Copia Profunda: Crea una copia real para los objetos anidados.</div>
+                <div>JavaScript ofrece varias maneras de asegurar la inmutabilidad de los objetos:</div>
+                <div>Object.assign(): Permite crear un nuevo objeto copiando los valores de otro objeto.</div>
+                <div>Object.freeze(): "Congela" un objeto, impidiendo que sea cambiado.</div>
+                <div>Sintaxis Spread: Crea un nuevo objeto con los valores de otro objeto.</div>
+                </article>
+                <article>
+                    <h2>Objetos Globales</h2>
+                    <div>JavaScript permite representar tipos de datos primitivos como objetos, aunque en la práctica se recomienda trabajar directamente con los valores primitivos por razones de rendimiento y simplicidad. </div>
+                    <div>Los tipos primitivos (number, string, boolean) pueden ser representados como objetos usando sus respectivos constructores (Number, String, Boolean).</div>
+                    <div>La comparación entre objetos primitivos y valores primitivos puede dar resultados inesperados:</div>
+                    <div><code>let numero1 = 5;
+                        let numero2 = new Number(5);
+                        console.log(numero1 == numero2); // true
+                        console.log(numero1 === numero2); // false</code></div>
+                    <div>Dos objetos primitivos con el mismo valor nunca serán iguales al compararlos:</div>
+                    <div><code>let obj1 = new Number(5);
+                        let obj2 = new Number(5);
+                        console.log(obj1 == obj2); // false
+                        console.log(obj1 === obj2); // false</code></div>
+                    <div>Los objetos primitivos ofrecen propiedades y métodos útiles:</div>
+                    <div>Number: MAX_VALUE, MIN_VALUE, MAX_SAFE_INTEGER, MIN_SAFE_INTEGER</div>
+                    <div>Métodos de conversión: toString(), parseInt(), parseFloat()</div>
+                    <div>JavaScript proporciona varios objetos globales útiles:</div>
+                    <div>Array: Para almacenar conjuntos ordenados de elementos</div>
+                    <div>Date: Para representar y manipular fechas y horas</div>
+                    <div>Math: Para realizar operaciones matemáticas</div>
+                    <div>String: Para procesamiento avanzado de texto</div>
+                </article>
+                <article>
+                    <h2>El Objeto Array</h2>
+                    <div>Los arrays en JavaScript son estructuras de datos que permiten almacenar una colección ordenada de elementos.</div>
+                    <div>Usando corchetes (notación literal):</div>
+                    <div><code>const bebidas = ["agua", "cerveza", "vino"];</code></div>
+                    <div>Usando el constructor Array():</div>
+                    <div><code>const bebidas = new Array("agua", "cerveza", "vino");</code></div>
+                    <div>Como un objeto con índices numéricos:</div>
+                    <div><code>const bebidas = {
+                        0: "agua",
+                        1: "cerveza",
+                        2: "vino"
+                      };</code></div>
+                    <div>Características importantes de los arrays en JavaScript:</div>
+                    <div>Pueden contener elementos de cualquier tipo, incluso otros objetos o arrays.</div>
+                    <div>Se recomienda declararlos como constantes (const) para evitar reasignaciones accidentales, aunque esto no impide modificar sus elementos internos.</div>
+                    <div>El operador typeof devuelve "object" para los arrays, por lo que para verificar si una variable es un array, se usa el operador instanceof</div>
+                    <div>Los arrays en JavaScript son muy flexibles y ofrecen numerosos métodos para manipular y transformar datos, como forEach(), map(), filter(), y reduce(), entre otros.</div>
+                    <h2>Acceso a los elementos de un array</h2>
+                    <div>Para acceder y manipular los elementos de un array en JavaScript, se utilizan los siguientes métodos:</div>
+                    <div>Acceso a elementos:</div>
+                    <div>Se usa el índice entre corchetes: array[posición], el índice comienza en 0</div>
+                    <div>Modificar o agregar elementos:</div>
+                    <div>Se usa la misma notación: array[posición] = nuevoValor</div>
+                    <div>ejemplo: <code>bebidas[3] = "Coca-Cola"</code> agrega un nuevo elemento</div>
+                    <div>Eliminar elementos:</div>
+                    <div>Se usa el operador delete: delete array[posición]</div>
+                    <div>Longitud del array:</div>
+                    <div>Se usa la propiedad length: array.length</div>
+                    <div>Recorrer elementos:</div>
+                    <div>Usando FOR:</div>
+                    <div><code>for (let i = 0; i = bebidas.length; i++) {
+                        console.log(bebidas[i]);
+                      }</code></div>
+                    <div>Usando for..of:</div>
+                    <div><code>for (let elemento of bebidas) {
+                        console.log(elemento);
+                      }</code></div>
+                    <div>Usando foreach():</div>
+                    <div><code>bebidas.forEach(function(elemento, indice, array) {
+                        console.log(elemento);
+                      });</code></div>
+                    <div>Convertir array a string:</div>
+                    <div>Método toString(): bebidas.toString()</div>
+                    <h2>Uso de arrays como colas o stacks</h2>
+                    <div>Para simular una cola de personas en un centro médico usando JavaScript, podemos utilizar un array y los métodos push() y shift(). </div>
+                    <div>Mira el script.js</div>
+                    <div>Este código simula las siguientes operaciones:</div>
+                    <div>Se inicia con una cola de tres pacientes.</div>
+                    <div>Ana llega y se une al final de la cola (push).</div>
+                    <div>Se atiende al primer paciente (shift).</div>
+                    <div>Carlos se cuela al principio de la cola (unshift).</div>
+                    <div>Llega una urgencia, Laura, que pasa al principio de la cola (unshift).</div>
+                    <div>Se atiende la urgencia, Laura (shift).</div>
+                    <h2>Métodos de unión, división y transformación de arrays</h2>
+                    <div>Los métodos concat(), slice(), y map() en JavaScript permiten crear nuevos arrays a partir de arrays existentes sin modificar los originales.</div>
+                    <div>concat(): Crea un nuevo array combinando elementos de otros arrays o valores:</div>
+                    <div><code>const bebidasSinAlcohol = ["agua", "zumo"];
+                        const bebidasConAlcohol = ["cerveza", "vino"];
+                        const bebidas = bebidasSinAlcohol.concat(bebidasConAlcohol);
+                        console.log(bebidas); // ["agua", "zumo", "cerveza", "vino"]</code></div>
+                    <div>slice(): Extrae una porción de un array existente para crear uno nuevo:</div>
+                    <div><code>const bebidas = ["agua", "zumo", "cerveza", "vino"];
+                        const bebidasSinAlcohol = bebidas.slice(0, 2);
+                        const bebidasConAlcohol = bebidas.slice(2);
+                        console.log(bebidasSinAlcohol); // ["agua", "zumo"]
+                        console.log(bebidasConAlcohol); // ["cerveza", "vino"]</code></div>
+                    <div>map(): Crea un nuevo array aplicando una función a cada elemento del array original:</div>
+                    <div><code>const temperaturasCentigrados = [0, 15, 30, 45];
+                        const temperaturasFahrenheit = temperaturasCentigrados.map(function(temp) {
+                            return temp * 9/5 + 32;
+                        });
+                        console.log(temperaturasFahrenheit); // [32, 59, 86, 113]</code></div>
+                    <h2>Métodos de ordenación de los elementos de un array</h2>
+                    <div>JavaScript proporciona varios métodos para ordenar y buscar elementos en un array.</div>
+                    <div>sort(): Ordena un array alfabéticamente según los valores Unicode de los caracteres.</div>
+                    <div>every(función): Retorna true si todos los elementos cumplen una condición.</div>
+                    <div>some(función): Retorna true si algún elemento cumple la condición.</div>
+                    <div>filter(función): Devuelve un nuevo array con los elementos que cumplen la condición.</div>
+                    <div>find(función): Devuelve el primer elemento que cumple la condición.</div>
+                    <div>findIndex(función): Retorna la posición del primer elemento que cumple la condición.</div>
+                    <div>indexOf(elemento): Retorna la primera posición de un elemento en el array (-1 si no existe).</div>
+                    <div>lastIndexOf(elemento): Retorna la última posición de un elemento en el array.</div>
+                    <div>includes(elemento): Retorna true si el array contiene el elemento, incluso si es NaN.</div>
+                </article>
+            <article>
+                <h2>El objeto String</h2>
+                <div>Un String es un tipo de dato primitivo que almacena y manipula texto.</div>
+                <div><code>const miString1 = "mi cadena de caracteres";</code></div>
+                <div>Conversión automática: Cuando se usa un método de String en una cadena primitiva, JavaScript la convierte en un objeto String temporalmente.</div>
+                <div>Se puede acceder a los caracteres de un String de forma individual o recorriéndolos con un bucle.</div>
+                <h2>Acceso a los caracteres de una cadena</h2>
+                <div>charAt(posición): Retorna el carácter en la posición especificada.</div>
+                <div>length: Devuelve la cantidad de caracteres en la cadena.</div>
+                <div>Se puede recorrer con un bucle for.</div>
+                <div>Tambien con for..of</div>
+                <h2>Métodos de manejo de cadenas</h2>
+                <div>concat(): Une dos o más cadenas.</div>
+                <div><code>let saludo = "Hola";
+                    let nombre = "Mundo";
+                    console.log(saludo.concat(", ", nombre, "!")); // "Hola, Mundo!"</code></div>
+                <div>slice(inicio, fin): Extrae una parte de la cadena. Admite índices negativos.</div>
+                <div><code>let texto = "JavaScript";
+                    console.log(texto.slice(0, 4)); 
+                    console.log(texto.slice(-6));</code></div>
+                <div>substring(inicio, fin): Similar a slice(), pero no admite índices negativos.</div>
+                <div><code>console.log(texto.substring(0, 4));</code></div>
+                <div>replace(valor, nuevoValor): Reemplaza la primera coincidencia.</div>
+                <div><code>let frase = "Me gusta JavaScript";
+                    console.log(frase.replace("JavaScript", "Python")); </code></div>
+                <div>toUpperCase(): Convierte a mayúsculas.</div>
+                <div>toLowerCase(): Convierte a minúsculas.</div>
+                <div><code>let palabra = "Hola";
+                    console.log(palabra.toUpperCase());
+                    console.log(palabra.toLowerCase());</code></div>
+                <div>trim(): Elimina espacios en blanco al inicio y al final.</div>
+                <div>trimStart(): Elimina solo al inicio.</div>
+                <div>trimEnd(): Elimina solo al final.</div>
+                <div><code>let mensaje = "   Hola Mundo   ";
+                    console.log(mensaje.trim());</code></div>
+                <div>split(separador): Divide una cadena en un array.</div>
+                <div>let lista = "manzana,pera,plátano";
+                    console.log(lista.split(","));<code></code></div>
+                <div>indexOf(valor): Devuelve la primera posición de valor o -1 si no lo encuentra.</div>
+                <div>lastIndexOf(valor): Busca desde el final.</div>
+                <div>search(expresiónRegular): Similar a indexOf(), pero acepta expresiones regulares.</div>
+                <div>includes(valor): Devuelve true si la cadena contiene valor.</div>
+                <div>startsWith(valor): Verifica si la cadena comienza con valor.</div>
+                <div>endsWith(valor): Verifica si la cadena termina con valor.</div>
+                <div><code>let frase2 = "JavaScript es genial";
+                    console.log(frase2.includes("JavaScript")); 
+                    console.log(frase2.startsWith("Java")); 
+                    console.log(frase2.endsWith("genial"));</code></div>
+                <h2>Unión, división y sustitución de partes de una cadena</h2>
+                <div>Para unir cadenas, el operador + es más usado que concat().</div>
+                <div>Para extraer texto, slice() es más flexible que substring().</div>
+                <div>Para reemplazar texto, replace() solo cambia la primera coincidencia, a menos que usemos expresiones regulares (/g).</div>
+                <h2>Manejo de mayúsculas, minúsculas y espacios</h2>
+                <div>toUpperCase: Convierte a mayúsculas.</div>
+                <div><code>let texto = "Ferrari";
+                    console.log(texto.toUpperCase());</code></div>
+                <div>toLowerCase: Convierte a minúsculas.</div>
+                <div><code>console.log(texto.toLowerCase());</code></div>
+                <div>trim(): Elimina espacios en blanco al inicio y al final.</div>
+                <div><code>let textoConEspacios = "   Ferrari   ";
+                    console.log("-" + textoConEspacios.trim() + "-");</code></div>
+                <div>trimStart(): Elimina solo los espacios al inicio.</div>
+                <div><code>console.log("-" + textoConEspacios.trimStart() + "-");</code></div>
+                <div>trimEnd(): Elimina solo los espacios al final.</div>
+                <div><code>console.log("-" + textoConEspacios.trimEnd() + "-")</code></div>
+                <h2>Conversión de cadenas en arrays</h2>
+                <div>El método split() divide una cadena en un array de elementos separados por un delimitador.</div>
+                <div><code>let texto = "Hola Mundo"; 
+                    console.log(texto.split(","));</code></div>
+                <div></div>
+                <div> Se puede usar un carácter o una expresión regular como separador.</div>
+                <div>Métodos como trim() ayudan a limpiar los resultados.</div>
+                <h2>Búsqueda de una cadena dentro de otra</h2>
+                <div>indexOf(): Busca una subcadena de izquierda a derecha</div>
+                <div>lastIndexOf(): Busca una subcadena de derecha a izquierda</div>
+                <div>search(): Busca una subcadena de izquierda a derecha, pero acepta expresiones regulares</div>
+                <div>includes(): Verifica si una subcadena existe</div>
+                <div>startsWith(): Verifica si la cadena empieza con un texto</div>
+                <div>endsWith(): Verifica si la cadena termina con un texto</div>
+                <h2>Plantillas literales</h2>
+                <div>Las plantillas literales (template literals) en JavaScript son una forma avanzada de manejar cadenas de texto. Permiten la interpolación de variables, la creación de cadenas multilínea y la inclusión de expresiones dinámicas sin necesidad de operadores de concatenación (+).</div>
+            </article>
+            <article>
+                <h2>El objeto Date</h2>
+                <div>El objeto Date en JavaScript es fundamental para manejar fechas y horas. Se usa para registrar eventos, calcular diferencias de tiempo, validar fechas y más.</div>
+                <div>El constructor new Date() permite crear objetos de fecha y hora de varias maneras:</div>
+                <div><code>let ahora = new Date();
+                    console.log(ahora);</code></div>
+                <div>Puedes poner una fecha específica:</div>
+                <div><code>let fechaISO = new Date("2023-08-11");
+                    console.log(fechaISO); </code></div>
+                <div>Especificando fecha y hora</div> 
+                <div><code>let fechaHora = new Date("2023-08-11T12:56:00Z"); // Z indica UTC
+                    console.log(fechaHora); </code></div>
+                <div>Crear una fecha con valores numéricos</div>
+                <div><code>let fechaNumerica = new Date(2023, 7, 11, 12, 56, 0);
+                    console.log(fechaNumerica);</code></div>
+                <div>Fechas basadas en milisegundos desde 1970</div>
+                <div><code>let fechaMilis = new Date(0); // 1 de enero de 1970
+                    console.log(fechaMilis); </code></div>
+                <div>Métodos para Obtener Información de una Fecha</div>
+                <div><code>let fecha = new Date("2025-03-23T15:30:45Z");
+
+                    console.log(fecha.getFullYear()); // 2025
+                    console.log(fecha.getMonth());    // 2 (Marzo, recuerda que enero = 0)
+                    console.log(fecha.getDate());     // 23
+                    console.log(fecha.getDay());      // 0 (Domingo, cuenta desde 0 = Domingo)
+                    console.log(fecha.getHours());    // 15
+                    console.log(fecha.getMinutes());  // 30
+                    console.log(fecha.getSeconds());  // 45
+                    console.log(fecha.getMilliseconds()); // 0
+                    console.log(fecha.getTime());     // Milisegundos desde 1970
+                    </code></div>
+                <h2>Métodos de manejo de fechas</h2>
+                <div>El objeto Date en JavaScript proporciona varios métodos para obtener y establecer la fecha y la hora, tanto en formato local como en formato UTC. A continuación, se detallan los métodos más comunes que permiten trabajar con fechas y horas.</div>
+                <div>getFullYear(): Devuelve el año de la fecha (4 dígitos).</div>
+                <div><code>let fecha = new Date();
+                    console.log(fecha.getFullYear()); // Ej: 2025
+                    </code></div>
+                <div>getMonth(): Devuelve el mes (rango 0-11). Enero es 0, diciembre es 11.</div>
+                <div><code>console.log(fecha.getMonth()); // Ej: 2 para marzo
+                </code></div>
+                <div>getDate(): Devuelve el día del mes (rango 1-31).</div>
+                <div><code>console.log(fecha.getDate()); // Ej: 23</code></div>
+                <div>getDay(): Devuelve el día de la semana (rango 0-6). Domingo es 0, sábado es 6.</div>
+                <div><code>console.log(fecha.getDay()); // Ej: 6 para sábado</code></div>
+                <div>getHours(): Devuelve la hora (rango 0-23).</div>
+                <div><code>console.log(fecha.getHours()); // Ej: 15</code></div>
+                <div>getMinutes(): Devuelve los minutos (rango 0-59).</div>
+                <div><code>console.log(fecha.getMinutes()); // Ej: 30
+                </code></div>
+                <div>getSeconds(): Devuelve los segundos (rango 0-59).</div>
+                <div><code>console.log(fecha.getSeconds()); // Ej: 45
+                </code></div>
+                <div>getTime(): Devuelve el número de milisegundos desde el 1 de enero de 1970.</div>
+                <div><code>console.log(fecha.getTime()); // Ej: 1648033200000
+                </code></div>
+                <div>setFullYear(año, mes, día): Establece el año, mes (opcional) y día (opcional).</div>
+                <div><code>fecha.setFullYear(2025); // Cambia el año a 2025
+                </code></div>
+                <div>setMonth(mes, día): Establece el mes (rango 0-11) y opcionalmente el día.</div>
+                <div><code>
+                    fecha.setMonth(2); // Cambia el mes a marzo (mes 2)
+                </code></div>
+                <div>setDate(día): Establece el día del mes (rango 1-31).</div>
+                <div><code>fecha.setDate(15); // Cambia el día a 15</code></div>
+                <div>setHours(hora, minuto, segundo, milisegundo): Establece la hora (rango 0-23), minutos, segundos y milisegundos.</div>
+                <div><code>fecha.setHours(18, 30, 0, 0);</code></div>
+                <div>setMinutes(minuto, segundo, milisegundo): Establece los minutos (rango 0-59), segundos y milisegundos.</div>
+                <div>fecha.setMinutes(45); // Cambia los minutos a 45</div>
+                <div>setSeconds(segundo, milisegundo): Establece los segundos (rango 0-59) y los milisegundos.</div>
+                <div><code>fecha.setSeconds(30); // Cambia los segundos a 30</code></div>
+                <div>setTime(milisegundos): Establece la fecha basada en el número de milisegundos desde el 1 de enero de 1970.</div>
+                <div><code>fecha.setTime(1648033200000); </code></div>
+            </article>
+            <article>
+                <h2>El objeto Math</h2>
+                <div>En JavaScript, el objeto Math proporciona diversas constantes y métodos que permiten realizar operaciones matemáticas avanzadas. A continuación, se detallan tanto las constantes más comunes como los métodos útiles para realizar cálculos numéricos, trigonométricos, logarítmicos, entre otros.</div>
+                <div>Math.E: Número de Euler (base de los logaritmos naturales), aproximadamente 2.71828.</div>
+                <div><code>console.log(Math.E);</code></div>
+                <div>Math.PI: El valor de π (pi), aproximadamente 3.1416.</div>
+                <div><code>console.log(Math.PI); </code></div>
+                <div>Math.SQRT2: La raíz cuadrada de 2, aproximadamente 1.414.</div>
+                <div><code>console.log(Math.SQRT2); </code></div>
+                <div>Math.SQRT1_2: La raíz cuadrada de ½, aproximadamente 0.707.</div>
+                <div><code>console.log(Math.SQRT1_2);</code></div>
+                <div>Math.LN2: El logaritmo natural de 2, aproximadamente 0.693.</div>
+                <div><code>console.log(Math.LN2);</code></div>
+                <div>Math.LN10: El logaritmo natural de 10, aproximadamente 2.303.</div>
+                <div><code>console.log(Math.LN10);</code></div>
+                <div>Math.LOG10E: El logaritmo en base 10 de e (número de Euler), aproximadamente 0.434.</div>
+                <div><code>console.log(Math.LOG10E);</code></div>
+                <div>Math.LOG2E: El logaritmo en base 2 de e, aproximadamente 1.442.</div>
+                <div><code>console.log(Math.LOG2E);</code></div>
+                <div>Math.sqrt(n): Devuelve la raíz cuadrada de un número.</div>
+                <div><code>console.log(Math.sqrt(16));</code></div>
+                <div>Math.sin(ángulo): Seno de un ángulo.</div>
+                <div>Math.cos(ángulo): Coseno de un ángulo.</div>
+                <div>Math.tan(ángulo): Tangente de un ángulo.</div>
+                <div>Math.asin(ángulo): Arco seno de un ángulo.</div>
+                <div>Math.acos(ángulo): Arco coseno de un ángulo.</div>
+                <div>Math.atan(ángulo): Arco tangente de un ángulo.</div>
+                <div>Math.log(n): Logaritmo natural (base e).</div>
+                <div>Math.log10(n): Logaritmo en base 10.</div>
+                <div>Math.log2(n): Logaritmo en base 2.</div>
+                <div>Math.max(a, b, ...): Devuelve el valor máximo de los argumentos.</div>
+                <div>Math.min(a, b, ...): Devuelve el valor mínimo de los argumentos.</div>
+                <div>Math.round(n): Redondea el número al entero más cercano.</div>
+                <div>Math.floor(n): Redondea el número hacia abajo (al entero más cercano menor).</div>
+                <div>Math.ceil(n): Redondea el número hacia arriba (al entero más cercano mayor).</div>
+                <div>Math.trunc(n): Elimina la parte decimal (trunca el número).</div>
+                <div>Math.sign(n): Devuelve el signo del número</div>
+                <div>Math.abs(n): Devuelve el valor absoluto de un número.</div>
+                <div>Math.random(): Devuelve un número aleatorio entre 0 y 1 (exclusive).</div>
+            </article>
+            <script src="script.js"></script>
+        </section>
+    </main>
+    <footer>
+        <p><a href="../index.html">Volver a la pagina principal</a></p>
+    </footer>
+</body>
+
+</html>
