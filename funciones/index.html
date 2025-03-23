@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+    <link rel="stylesheet" href="../style2.css">
+</head>
+
+<body>
+    <header>
+        <h1>Unidad 7</h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Funciones</h2>
+                <div>Una función es un conjunto de sentencias que realizan una tarea específica, las funciones permiten dividir un programa en partes más manejables y facilitan la reutilización de código.</div>
+                <div>Se declaran con la palabra clave function, seguida del nombre de la función y paréntesis para los argumentos.</div>
+                <div>El cuerpo de la función se escribe entre llaves {}.</div>
+                <div>Las funciones pueden recibir argumentos y devolver valores mediante la sentencia return.</div>
+                <div>En JavaScript, las declaraciones de funciones se mueven al principio del programa.</div>
+                <div>Las funciones pueden ser llamadas antes de ser definidas en el código.</div>
+                <div>Se pueden usar como valores, almacenarse en variables o pasarse como argumentos a otras funciones.</div>
+            </article>
+            <article>
+                <h2>INVOCACIÓN DE UNA FUNCIÓN</h2>
+                <div>Las funciones pueden tener argumentos con valores por defecto, estos valores se utilizan cuando no se proporciona un argumento al llamar la función.</div>
+                <div><pre>function calcularImporte(importeNeto, iva = ivaGeneral)</pre></div>
+                <div>Se pueden crear funciones que acepten un número indeterminado de argumentos.</div>
+                <div><pre>function nombreFuncion(...listaArgumentos)</pre></div>
+                <div>Los argumentos se pueden recorrer usando un bucle for...of.</div>
+                <div>En JavaScript, los argumentos se pasan por valor a las funciones.</div>
+                <div>Esto significa que se hace una copia del valor del argumento.</div>
+                <div>Las modificaciones a los argumentos dentro de la función no afectan a las variables originales fuera de la función.</div>
+            </article>
+           <article>
+            <h2>EL TIPO DE DATOS FUNCTION</h2>
+            <div>En JavaScript, las funciones son objetos de tipo Function.</div>
+            <div>Esto se puede comprobar usando el operador typeof en una función, que devolverá "function".</div>
+            <div>Las funciones pueden ser almacenadas en variables, pasadas como argumentos a otras funciones y devolver valores.</div>
+            <div>Las funciones pueden ser utilizadas como valores en expresiones y pueden ser almacenadas en arrays y objetos.</div>
+            <div>Pueden declararse como funciones y tambien como anonimas</div>
+           </article>
+           <article>
+            <h2>ALCANCE DE LAS VARIABLES</h2>
+            <div>Variables globales: Se definen en el bloque principal del código y son accesibles desde cualquier parte del programa, incluyendo dentro de funciones.</div>
+            <div>Variables locales: Se declaran dentro de una función o bloque de código y solo son accesibles dentro de ese ámbito específico.</div>
+            <div>Las variables globales pueden ser leídas y modificadas tanto dentro como fuera de las funciones.</div>
+            <div>Las variables locales son inaccesibles fuera de su ámbito y se destruyen al finalizar la ejecución de la función o bloque.</div>
+            <div>Es posible tener variables globales y locales con el mismo nombre sin que esto cause un error, ya que pertenecen a ámbitos diferentes.</div>
+            <div>Dentro de una función, JavaScript da preferencia a las variables locales sobre las globales con el mismo nombre.</div>
+           </article>
+            <script src="script.js"></script>
+        </section>
+    </main>
+    <footer>
+        <p><a href="../index.html">Volver a la pagina principal</a></p>
+    </footer>
+</body>
+
+</html>
