@@ -26,7 +26,6 @@ if (edad < 18) {
 console.log(m);
 
 //switch..case
-let c = prompt("Introduce el tipo de carnet (A, B, C, D):");
 let vehiculos;
 
 switch (carnet) {
@@ -47,7 +46,6 @@ switch (carnet) {
 }
 console.log(vehiculos);
 
-let w = prompt("Pon gallina o loro o serpiente o cocodrilo");
 let animal = "", especie = "";
 
 switch (animal) {
@@ -64,7 +62,6 @@ switch (animal) {
 }
 
 //for
-let numero = Number(prompt("Introduce un número para generar su tabla de multiplicar:"));
 let tablaMultiplicar = "";
 
 if (!isNaN(numero) && numero > 0 && numero % 1 === 0) {
