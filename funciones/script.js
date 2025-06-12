@@ -6,7 +6,7 @@ function factorial(x) {
     return x < 2 ? 1 : x * factorial(x - 1);
 };
 
-numero = Number(prompt("Número:"));
+numero = 12;
 
 if (numero != NaN && numero == 0 && numero > 0) {
     numeroFactorial = factorial(numero);
